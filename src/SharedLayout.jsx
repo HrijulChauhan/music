@@ -153,11 +153,10 @@ export default function SharedLayout() {
 
       {/* circle */}
       <div style={{ paddingLeft: "0rem" }}>
-        <div style={{ width: "90%", margin: "5rem auto" }}>
+        <div className = "randomClass">
           {/* Circle aligned to the left edge of the container */}
           <div
             style={{
-              marginTop: "40px",
               marginBottom: "64px",
               height: "30px",
               width: "30px",
@@ -170,8 +169,8 @@ export default function SharedLayout() {
           <ul
             className="list"
             style={{
-              display: "grid",
-              gridTemplateColumns: "repeat(4, 1fr)",
+              // display: "grid",
+              // gridTemplateColumns: "repeat(2, 1fr)",
               gap: "72px 24px", // Different vertical and horizontal gaps
               listStyle: "none",
               padding: 0,
@@ -492,7 +491,7 @@ const GAMES = [
     duration: 168.6726,
   },
   {
-    title: "The Hanumankind 'On The Radar' Freestyle Radio",
+    title: "Hanumankind Freestyle",
     description: "The Hanumankind & On The Radar",
     image:
       "https://i1.sndcdn.com/artworks-sBEc25mR0PhYkb2Z-oFS9Yg-t500x500.jpg",

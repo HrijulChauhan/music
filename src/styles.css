@@ -12,18 +12,57 @@ body {
   background-color: #0a0a0a;
   color: #dddcd6;
   -webkit-font-smoothing: inherit;
+  margin: 0;
+  padding: 0;
+  height: 100%;
 }
 
 .list {
-  position: relative;
-  display: flex;
-  width: 100%;
-  flex-direction: column;
-  align-items: center;
+  display: grid;
+  gap: 72px 24px; /* vertical & horizontal gaps */
+  list-style: none;
   padding: 0;
-  margin: 48px 0;
+  margin: 0;
+  grid-template-columns: repeat(1, 1fr); /* default: 1 column on very small screens */
 }
 
+.randomClass {
+  width: 90%;
+  margin-top: 5rem;
+  margin-left: auto;
+}
+
+@media (min-width: 600px) {
+  .list {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 600px) {
+  .randomClass {
+    width: 90%;
+    margin-top: 4rem;
+    margin-left: auto;
+  }
+}
+
+@media (min-width: 900px) {
+  .list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1400px) {
+  .list {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (min-width: 1800px) {
+  .list {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
 /* ---------- Overlay ---------- */
 .overlay {
   position: fixed;
